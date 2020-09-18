@@ -1,8 +1,10 @@
 import os
 import unittest
 import ddt
-from lib.utils import hash_code
-from setting import DATA_PATH
+import requests
+
+from lib.utils import *
+from setting import *
 
 @ddt.ddt
 class Alter(unittest.TestCase):
@@ -15,17 +17,28 @@ class Alter(unittest.TestCase):
         data=case.get('data')
         print(data)
         check=case.get('check')
+        print(check)
         if 'old_password' in data:
             data['old_password']=hash_code(data['old_password'])
             print(data['old_password'])
         if 'new_password' in data:
             data['new_password'] = hash_code(data['new_password'])
             print(data['new_password'])
-        try:
-            if method.lower() == 'post':
 
+        if method.lower() == 'post':
+            res=requests.post(url,data=data)
+            resp=res.text
+            print(resp)
+        else:
+            res=requests.get(url,params=data)
+            resp=res.text
+            print(resp)
 
-
+        result=set_res_data(resp)
+        print(result)
+        for i in check:
+            print(i)
+            self.assertIn(i,result)
 
 if __name__ == '__main__':
     unittest.main()
