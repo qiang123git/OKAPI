@@ -25,7 +25,7 @@ from lib.tools import str
 class MultiProfile(unittest.TestCase):
     @ddt.file_data(os.path.join(DATA_PATH,'MultiProfile.yaml'))
     def test_multiprofile(self,**payload):
-        self._testMethodDoc=payload.get('detail')
+        # self._testMethodDoc=payload.get('detail')
         base_url=payload.get('url') #获取url
         args=payload.get('data') #获取需要传递得参数
 
