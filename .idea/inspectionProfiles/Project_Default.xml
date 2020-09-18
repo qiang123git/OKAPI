@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="demo_baidu_serach.phyton" />
+          <option value="selenium.common.by" />
+          <option value="bin.run.create_case" />
+          <option value="bin.run.CASE_PATH" />
+          <option value="bin.run.time_now" />
+          <option value="cases.test_zhuce.CASE_PATH" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
