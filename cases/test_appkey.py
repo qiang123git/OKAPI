@@ -7,7 +7,7 @@ from lib.utils import *
 
 @ddt.ddt
 class AppKey(unittest.TestCase):
-    @ddt.file_data(os.path.join(DATA_PATH,'appkey为空修改密码.yaml'))
+    @ddt.file_data(os.path.join(DATA_PATH,'appkey.yaml'))
     def test_appkey(self,**case):
         print(case)
         url=case.get('url')
