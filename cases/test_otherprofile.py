@@ -1,3 +1,7 @@
+"""
+otherprofile接口测试用例
+"""
+
 import unittest,requests,ddt,os
 from lib.utils import set_res_data
 from setting import DATA_PATH
