@@ -1,0 +1,11 @@
+-
+  url: http://hn216.api.yesapi.cn/?s=App.User.AlterPassword
+  method: post
+  data:
+    app_Key:
+    uuid: A1B76701DF40437697544E5654505E6D
+    username: hhh
+    old_password: '654321'
+    new_password: '123456'
+  check:
+    - ret=400
